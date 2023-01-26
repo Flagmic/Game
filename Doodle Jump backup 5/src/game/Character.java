@@ -6,9 +6,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class Character extends JLabel {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	ImageIcon image;
 	private int x;
@@ -75,8 +72,6 @@ public class Character extends JLabel {
 		if(this.getSpeed_x()<-2)
 			this.setSpeed_x(-2);
 		
-		if(this.getSpeed_y()<-5)
-			this.setSpeed_y(-5);
 		x+=speed_x;
 		y+=speed_y;
 		speed_y+=0.06;

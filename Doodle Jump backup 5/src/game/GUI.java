@@ -1,21 +1,21 @@
 package game;
 
-import java.awt.*;
-import javax.swing.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
 
 public class GUI extends JFrame implements KeyListener {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+	
 	Character dood;
+	Score Score=new Score();
 
-	boolean w=false;
 	boolean d=false;
-	boolean s=false;
 	boolean a=false;
-	GUI(){
+	
+	public GUI(){
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setTitle("Doodle Jump");
 		this.setVisible(true);
@@ -23,6 +23,7 @@ public class GUI extends JFrame implements KeyListener {
 		this.setSize(450,600);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
+		this.add(Score);
 		dood = new Character();
 		this.add(dood);
 		dood.setBackground(Color.red);
@@ -38,9 +39,9 @@ public class GUI extends JFrame implements KeyListener {
 			a=true;
 			break;
 		case 's':
-			if(w) {dood.setSpeed_y(0);break;}
-			dood.incSpeed_y(10);
-			s=true;
+//			if(s) {dood.setSpeed_y(0);break;}
+			dood.incSpeed_y(5);
+//			s=true;
 			break;
 		case 'd':
 			if(a){dood.setSpeed_x(0);break;}
@@ -64,7 +65,6 @@ public class GUI extends JFrame implements KeyListener {
 			break;
 		}
 	}
-
 	@Override
 	public void keyTyped(KeyEvent e) {
 	

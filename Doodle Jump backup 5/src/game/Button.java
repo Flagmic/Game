@@ -7,14 +7,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class Button extends JButton{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	boolean IsRunning=false;
+	Score Score;
 	
 	public Button() {
-		this.setText("New Game");
+		this.setText("New dood");
 		this.setBounds(175,275,100,30);
 		this.setBackground(Color.yellow);
 		ActionListener button_pressed_action=new ActionListener() {
