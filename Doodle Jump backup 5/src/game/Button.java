@@ -19,6 +19,7 @@ public class Button extends JButton{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				IsRunning=true;
+//				Score.setScore_0();
 			}
 		};
 		this.addActionListener(button_pressed_action);

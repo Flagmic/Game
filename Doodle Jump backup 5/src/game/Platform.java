@@ -31,14 +31,16 @@ public class Platform extends JLabel{
 		Random r=new Random();
 		isBreakable=r.nextInt(10)+1;
 		this.setBackground(Color.blue);
-		if(isBreakable<=10) {
-			breakable=true;
-			this.setBackground(Color.black);
-		}
 		setBounds(p.getX(),p.getY(),p.getWidth(),p.getHeight());
 		this.setOpaque(true);
-//		ImageIcon a=new ImageIcon("Pictures\\platform.png");
-//		this.setIcon(new ImageIcon(a.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT)));
+		ImageIcon a=new ImageIcon("Pictures\\platform.png");
+		this.setIcon(new ImageIcon(a.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT)));
+		if(isBreakable<=3) {
+			breakable=true;
+			ImageIcon b=new ImageIcon("Pictures\\breakyplatform.png");
+			this.setIcon(new ImageIcon(b.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT)));
+//			this.setBackground(Color.black);
+		}
 	}
 	public double getSpeed() {
 		return speed;
